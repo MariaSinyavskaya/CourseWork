@@ -99,6 +99,6 @@ public class Employee {
     }
 
     public static void printSeparator() {
-        System.out.println("======================================================================");
+        System.out.println("=====================================================================");
     }
 }

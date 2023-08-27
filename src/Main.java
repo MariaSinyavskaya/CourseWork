@@ -29,7 +29,7 @@ public class Main {
         Employee.addToArray(employees, emp9);
         Employee.addToArray(employees, emp10);
 
-        emp2.setSalary(59890);
+        emp2.setSalary(58890);
 
         System.out.println("Список всех сотрудников со всеми имеющимися по ним данными:");
         for (Employee employee : employees) {
