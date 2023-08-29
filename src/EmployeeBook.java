@@ -22,7 +22,7 @@ public class EmployeeBook {
     public static Employee findEmployeeWithMinSalary(Employee[] array) {
         Employee employeeWithMinSalary = array[0];
         for (Employee employee : array) {
-            if (employee != null && employee.getSalary() < employeeWithMinSalary.getSalary()) {
+            if (employee != null && employeeWithMinSalary == null || employee.getSalary() < employeeWithMinSalary.getSalary()) {
                 employeeWithMinSalary = employee;
             }
         }
@@ -32,7 +32,7 @@ public class EmployeeBook {
     public static Employee findEmployeeWithMaxSalary(Employee[] array) {
         Employee employeeWithMaxSalary = array[0];
         for (Employee employee : array) {
-            if (employee != null && employee.getSalary() > employeeWithMaxSalary.getSalary()) {
+            if (employee != null && employeeWithMaxSalary == null || employee.getSalary() > employeeWithMaxSalary.getSalary()) {
                 employeeWithMaxSalary = employee;
             }
         }
