@@ -18,16 +18,16 @@ public class Main {
         Employee emp9 = new Employee("Тихонов Никита Игоревич", department5, 38990);
         Employee emp10 = new Employee("Сергеев Александр Владимирович", department4, 70888);
 
-        Employee.addToArray(employees, emp1);
-        Employee.addToArray(employees, emp2);
-        Employee.addToArray(employees, emp3);
-        Employee.addToArray(employees, emp4);
-        Employee.addToArray(employees, emp5);
-        Employee.addToArray(employees, emp6);
-        Employee.addToArray(employees, emp7);
-        Employee.addToArray(employees, emp8);
-        Employee.addToArray(employees, emp9);
-        Employee.addToArray(employees, emp10);
+        EmployeeBook.addToArray(employees, emp1);
+        EmployeeBook.addToArray(employees, emp2);
+        EmployeeBook.addToArray(employees, emp3);
+        EmployeeBook.addToArray(employees, emp4);
+        EmployeeBook.addToArray(employees, emp5);
+        EmployeeBook.addToArray(employees, emp6);
+        EmployeeBook.addToArray(employees, emp7);
+        EmployeeBook.addToArray(employees, emp8);
+        EmployeeBook.addToArray(employees, emp9);
+        EmployeeBook.addToArray(employees, emp10);
 
         emp2.setSalary(58890);
 
@@ -37,21 +37,26 @@ public class Main {
                 System.out.println(employee.toString());
             }
         }
-        Employee.printSeparator();
+        printSeparator();
 
-        System.out.println("Сумма затрат на зарплаты в месяц: " + Employee.calculateTotalSalary(employees));
-        Employee.printSeparator();
+        System.out.println("Сумма затрат на зарплаты в месяц: " + EmployeeBook.calculateTotalSalary(employees));
+        printSeparator();
 
-        Employee.findEmployeeWithMinSalary(employees);
-        Employee.printSeparator();
+        System.out.println("Сотрудник с минимальной зарплатой: " + EmployeeBook.findEmployeeWithMinSalary(employees));
+        printSeparator();
 
-        Employee.findEmployeeWithMaxSalary(employees);
-        Employee.printSeparator();
+        System.out.println("Сотрудник с максимальной зарплатой: " + EmployeeBook.findEmployeeWithMaxSalary(employees));
+        printSeparator();
 
-        System.out.println("Среднее значение зарплат: " + Employee.calculateAverageSalary(employees));
-        Employee.printSeparator();
+        System.out.println("Среднее значение зарплат: " + EmployeeBook.calculateAverageSalary(employees));
+        printSeparator();
 
-        Employee.printFullNamesOfAllEmployees(employees);
-        Employee.printSeparator();
+        System.out.println("Список имен всех сотрудников");
+        EmployeeBook.printFullNamesOfAllEmployees(employees);
+        printSeparator();
+    }
+
+    public static void printSeparator() {
+        System.out.println("=====================================================================");
     }
 }
